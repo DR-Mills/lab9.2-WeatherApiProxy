@@ -15,7 +15,7 @@ public class WeatherApiCallService {
 	private RestTemplate rt = new RestTemplate();
 	
 	
-	// returns list of periods (under properties) from weather forecast
+	// returns list of WeatherPeriod from weather.gov api forecast
 	public List<WeatherPeriod> getWeatherPeriodList(Double lat, Double lon) {
 		
 		String url = getForcastUrl(lat, lon);
@@ -35,4 +35,5 @@ public class WeatherApiCallService {
 		
 		return pointsResponse.getPointProperties().getForecast();	
 	}
+	
 }
