@@ -1,4 +1,4 @@
-package api.weather.proxy.api.weather.proxy.model.IncomingApiModel;
+package api.weather.proxy.api.weather.proxy.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -6,42 +6,64 @@ public class WeatherPeriod {
 
 	@JsonProperty("number")
 	private Integer number;
-	
+
 	@JsonProperty("name")
 	private String name;
-	
+
 	@JsonProperty("startTime")
 	private String startTime;
-	
+
 	@JsonProperty("endTime")
 	private String endTime;
-	
+
 	@JsonProperty("isDaytime")
 	private boolean isDaytime;
-	
+
 	@JsonProperty("temperature")
 	private Integer temperature;
-	
+
 	@JsonProperty("temperatureUnit")
 	private String temperatureUnit;
-	
+
 	@JsonProperty("temperatureTrend")
 	private String temperatureTrend;
-	
+
 	@JsonProperty("windSpeed")
 	private String windSpeed;
-	
+
 	@JsonProperty("windDirection")
 	private String windDirection;
-	
+
 	@JsonProperty("icon")
 	private String icon;
-	
+
 	@JsonProperty("shortForecast")
 	private String shortForecast;
-	
+
 	@JsonProperty("detailedForecast")
 	private String detailedForecast;
+
+	// constructors
+	
+	public WeatherPeriod() {};
+	
+	public WeatherPeriod(Integer number, String name, String startTime, String endTime, boolean isDaytime,
+			Integer temperature, String temperatureUnit, String temperatureTrend, String windSpeed,
+			String windDirection, String icon, String shortForecast, String detailedForecast) {
+		this.number = number;
+		this.name = name;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.isDaytime = isDaytime;
+		this.temperature = temperature;
+		this.temperatureUnit = temperatureUnit;
+		this.temperatureTrend = temperatureTrend;
+		this.windSpeed = windSpeed;
+		this.windDirection = windDirection;
+		this.icon = icon;
+		this.shortForecast = shortForecast;
+		this.detailedForecast = detailedForecast;
+	}
 
 	// getters & setters
 	public Integer getNumber() {
@@ -76,11 +98,11 @@ public class WeatherPeriod {
 		this.endTime = endTime;
 	}
 
-	public boolean isDaytime() {
+	public boolean getIsDaytime() {
 		return isDaytime;
 	}
 
-	public void setDaytime(boolean isDaytime) {
+	public void setIsDaytime(boolean isDaytime) {
 		this.isDaytime = isDaytime;
 	}
 
@@ -153,8 +175,5 @@ public class WeatherPeriod {
 		return "WeatherPeriod [number=" + number + ", name=" + name + ", temperature=" + temperature
 				+ ", temperatureUnit=" + temperatureUnit + ", shortForecast=" + shortForecast + "]";
 	}
-	
-	
 
-	
 }

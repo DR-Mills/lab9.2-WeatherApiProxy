@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import api.weather.proxy.api.weather.proxy.model.IncomingApiModel.WeatherGridPointsResponse;
-import api.weather.proxy.api.weather.proxy.model.IncomingApiModel.WeatherPeriod;
-import api.weather.proxy.api.weather.proxy.model.IncomingApiModel.WeatherPointsResponse;
+import api.weather.proxy.api.weather.proxy.model.WeatherGridPointsResponse;
+import api.weather.proxy.api.weather.proxy.model.WeatherPeriod;
+import api.weather.proxy.api.weather.proxy.model.WeatherPointsResponse;
 
 @Service
 public class WeatherApiCallService {

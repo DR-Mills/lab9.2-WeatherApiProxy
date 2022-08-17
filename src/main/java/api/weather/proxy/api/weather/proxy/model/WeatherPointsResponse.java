@@ -1,4 +1,4 @@
-package api.weather.proxy.api.weather.proxy.model.IncomingApiModel;
+package api.weather.proxy.api.weather.proxy.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

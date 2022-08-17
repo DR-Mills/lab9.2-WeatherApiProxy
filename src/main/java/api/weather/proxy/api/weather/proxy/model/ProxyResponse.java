@@ -1,4 +1,4 @@
-package api.weather.proxy.api.weather.proxy.model.OutgoingApiModel;
+package api.weather.proxy.api.weather.proxy.model;
 
 import java.util.List;
 
