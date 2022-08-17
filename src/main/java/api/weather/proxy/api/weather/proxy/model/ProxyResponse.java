@@ -8,6 +8,17 @@ public class ProxyResponse {
 	
 	private Stats stats;
 
+	// constructor
+	public ProxyResponse(List<ProxyPeriod> periods, Stats stats) {
+		this.periods = periods;
+		this.stats = stats;
+	}
+	
+	public ProxyResponse(List<ProxyPeriod> periods) {
+		this.periods = periods;
+	}
+	
+
 	// getters & setters
 	public List<ProxyPeriod> getPeriods() {
 		return periods;

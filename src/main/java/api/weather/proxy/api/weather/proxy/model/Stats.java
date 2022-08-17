@@ -8,11 +8,19 @@ public class Stats {
 	
 	private ProxyPeriod coldestPeriod;
 
+	//constructor
+	public Stats(int averageTemperature, ProxyPeriod hottestPeriod, ProxyPeriod coldestPeriod) {
+		this.averageTemperature = averageTemperature;
+		this.hottestPeriod = hottestPeriod;
+		this.coldestPeriod = coldestPeriod;
+	}
+	
 	
 	// getters & setters
 	public int getAverageTemperature() {
 		return averageTemperature;
 	}
+
 
 	public void setAverageTemperature(int averageTemperature) {
 		this.averageTemperature = averageTemperature;
