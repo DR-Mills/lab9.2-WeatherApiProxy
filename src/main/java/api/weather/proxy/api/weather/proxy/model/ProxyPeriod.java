@@ -8,6 +8,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class ProxyPeriod extends WeatherPeriod {
 
 	// constructor
+	
+	public ProxyPeriod() {}
+	
 	public ProxyPeriod(Integer number, String name, String startTime, String endTime, boolean isDaytime,
 			Integer temperature, String temperatureUnit, String temperatureTrend, String windSpeed,
 			String windDirection, String icon, String shortForecast, String detailedForecast) {
@@ -15,18 +18,8 @@ public class ProxyPeriod extends WeatherPeriod {
 				windDirection, icon, shortForecast, detailedForecast);
 	}
 
-	
 	// field variables
-	private int temperatureCelsius = convertTempFtoC(getTemperature());
-
-	
-	// methods
-	private int convertTempFtoC(Integer temperature) {
-		double tempF = temperature * 1.00;
-		double tempC = ((tempF - 32.00) * 5) / 9;
-		int tempCInt = (int) Math.round(tempC);
-		return tempCInt;
-	}
+	private int temperatureCelsius;
 
 	
 	// getters & setters
@@ -34,8 +27,10 @@ public class ProxyPeriod extends WeatherPeriod {
 		return temperatureCelsius;
 	}
 
-	public void setTemperatureCelsius(int temperatureCelsius) {
-		this.temperatureCelsius = temperatureCelsius;
+	public void setTemperatureCelsius(Integer temperature) {
+		double tempC = ((temperature - 32.00) * 5) / 9;
+		int tempCInt = (int) Math.round(tempC);
+		this.temperatureCelsius = tempCInt;
 	}
 
 }

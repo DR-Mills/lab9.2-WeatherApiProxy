@@ -7,13 +7,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GridPoint {
 
 	@JsonProperty("periods")
-	private List<WeatherPeriod> periodsList;
+	private List<ProxyPeriod> periodsList;
 
-	public List<WeatherPeriod> getPeriodsList() {
+	public List<ProxyPeriod> getPeriodsList() {
 		return periodsList;
 	}
 
-	public void setPeriodsList(List<WeatherPeriod> periodsList) {
+	public void setPeriodsList(List<ProxyPeriod> periodsList) {
 		this.periodsList = periodsList;
 	}
 	

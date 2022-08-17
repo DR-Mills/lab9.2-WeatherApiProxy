@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import api.weather.proxy.api.weather.proxy.model.ProxyPeriod;
 import api.weather.proxy.api.weather.proxy.model.WeatherGridPointsResponse;
 import api.weather.proxy.api.weather.proxy.model.WeatherPeriod;
 import api.weather.proxy.api.weather.proxy.model.WeatherPointsResponse;
@@ -15,8 +16,8 @@ public class WeatherApiCallService {
 	private RestTemplate rt = new RestTemplate();
 	
 	
-	// returns list of WeatherPeriod from weather.gov api forecast
-	public List<WeatherPeriod> getWeatherPeriodList(Double lat, Double lon) {
+	// returns list of ProxyPeriod from weather.gov api forecast
+	public List<ProxyPeriod> getPeriodList(Double lat, Double lon) {
 		
 		String url = getForcastUrl(lat, lon);
 		
