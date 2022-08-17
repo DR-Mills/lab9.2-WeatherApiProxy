@@ -43,28 +43,6 @@ public class WeatherPeriod {
 	@JsonProperty("detailedForecast")
 	private String detailedForecast;
 
-	// constructors
-	
-	public WeatherPeriod() {};
-	
-	public WeatherPeriod(Integer number, String name, String startTime, String endTime, boolean isDaytime,
-			Integer temperature, String temperatureUnit, String temperatureTrend, String windSpeed,
-			String windDirection, String icon, String shortForecast, String detailedForecast) {
-		this.number = number;
-		this.name = name;
-		this.startTime = startTime;
-		this.endTime = endTime;
-		this.isDaytime = isDaytime;
-		this.temperature = temperature;
-		this.temperatureUnit = temperatureUnit;
-		this.temperatureTrend = temperatureTrend;
-		this.windSpeed = windSpeed;
-		this.windDirection = windDirection;
-		this.icon = icon;
-		this.shortForecast = shortForecast;
-		this.detailedForecast = detailedForecast;
-	}
-
 	// getters & setters
 	public Integer getNumber() {
 		return number;
